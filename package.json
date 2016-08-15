@@ -1,0 +1,27 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts": "tsc",
+    "server": "java -jar ./selenium-server-standalone-2.53.1.jar",
+    "test.sp": "npm run ts && URL=http://liginc.co.jp/ SPEC=sp ./node_modules/.bin/wdio wdio.conf.js",
+    "test.pc": "npm run ts && URL=http://liginc.co.jp/ SPEC=pc ./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^2.2.29",
+    "@types/node": "^6.0.33",
+    "@types/webdriverio": "^4.0.28",
+    "power-assert": "^1.4.1",
+    "typescript": "^2.1.0-dev.20160813",
+    "wdio-dot-reporter": "0.0.6",
+    "wdio-mocha-framework": "^0.4.0",
+    "wdio-screenshot": "^0.1.2",
+    "wdio-selenium-standalone-service": "0.0.5",
+    "webdriverio": "^4.2.3"
+  }
+}

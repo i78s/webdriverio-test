@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "moduleResolution": "node"
+    },
+    "filesGlob": [
+        "test/specs/**/*.ts",
+        "node_modules/@types/**/index.d.ts",
+        "node_modules/typescript/lib/lib.es6.d.ts",
+        "manual_typings/**/index.d.ts"
+    ]
+}
