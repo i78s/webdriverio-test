@@ -9,7 +9,7 @@ $ npm install
 
 直下にselenium-server-standaloneとchromedriverを設置する
 
-http://webdriver.io/guide.html
+http://webdriver.io/guide.html  
 http://docs.seleniumhq.org/download/
 
 
