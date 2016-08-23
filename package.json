@@ -6,8 +6,8 @@
   "scripts": {
     "ts": "tsc",
     "server": "java -jar ./selenium-server-standalone-2.53.1.jar",
-    "test.sp": "npm run ts && URL=http://liginc.co.jp/ SPEC=sp ./node_modules/.bin/wdio wdio.conf.js",
-    "test.pc": "npm run ts && URL=http://liginc.co.jp/ SPEC=pc ./node_modules/.bin/wdio wdio.conf.js"
+    "ss.sp": "npm run ts && TARGET=prod SPEC=screenshot DEVICE=sp ./node_modules/.bin/wdio wdio.conf.js",
+    "ss.pc": "npm run ts && TARGET=prod SPEC=screenshot DEVICE=pc ./node_modules/.bin/wdio wdio.conf.js"
   },
   "keywords": [],
   "author": "",

@@ -8,14 +8,14 @@ $ npm install
 
 ## テスト実行
 
-モバイルサイトのテスト
+モバイルサイトのスクリーンショットを撮る
 
 ```
-$ npm run test.sp
+$ npm run ss.sp
 ```
 
-PCサイトのテスト
+PCサイトのスクリーンショットを撮る
 
 ```
-$ npm run test.pc
+$ npm run ss.pc
 ```

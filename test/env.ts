@@ -1,7 +1,6 @@
 
-const screenShotPath = './screenshot/';
+const DEVICE = browser.config.DEVICE;
 
 export default {
-    screenShotPathPC: `${screenShotPath}pc/`,
-    screenShotPathSP: `${screenShotPath}sp/`,
+    screenShotPath: `./screenshot/${DEVICE}/`,
 }

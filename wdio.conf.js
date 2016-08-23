@@ -1,9 +1,19 @@
-const URL = process.env.URL;
-const SPEC = process.env.SPEC;
-const CHROMEOPTIONS_ARGS = SPEC === 'pc' ? {} : {
+const TARGET = process.env.TARGET;
+const URL = getBaseURL(TARGET);
+const DEVICE = process.env.DEVICE;
+const SPEC = process.env.SPEC === 'screenshot' ? process.env.SPEC : DEVICE;
+const CHROMEOPTIONS_ARGS = DEVICE === 'pc' ? {} : {
     args: ['user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X; en-us) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53']
 };
-const VIEWPORTSIZE = SPEC === 'pc' ? {width: 1280, height: 600} : {width: 375, height: 667};
+const VIEWPORTSIZE = DEVICE === 'pc' ? {width: 1280, height: 600} : {width: 375, height: 667};
+
+function getBaseURL(TARGET) {
+    var url = {
+        local: 'http://docker.local',
+        prod: 'http://liginc.co.jp'
+    };
+    return url[TARGET];
+}
 
 exports.config = {
 
@@ -152,6 +162,11 @@ exports.config = {
     // variables, such as `browser`. It is the perfect place to define custom commands.
      before: function (capabilities, specs) {
          browser.setViewportSize(VIEWPORTSIZE, true);
+         // testコード内にも環境変数渡したいのでbrowserにぶら下げとく
+         browser.config = {
+             TARGET: TARGET,
+             DEVICE: DEVICE
+         };
      },
     //
     // Hook that gets executed before the suite starts
