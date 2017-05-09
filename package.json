@@ -17,11 +17,11 @@
     "@types/node": "^6.0.33",
     "@types/webdriverio": "^4.0.28",
     "power-assert": "^1.4.1",
-    "typescript": "^2.1.0-dev.20160813",
-    "wdio-dot-reporter": "0.0.6",
-    "wdio-mocha-framework": "^0.4.0",
-    "wdio-screenshot": "^0.1.2",
-    "wdio-selenium-standalone-service": "0.0.5",
-    "webdriverio": "^4.2.3"
+    "typescript": "^2.3.2",
+    "wdio-dot-reporter": "0.0.8",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-screenshot": "^0.5.2",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "webdriverio": "^4.8.0"
   }
 }
